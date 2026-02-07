@@ -1,16 +1,82 @@
-# React + Vite
+# Unsaid — Intent-Driven Generative UI using Tambo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Unsaid is a web application that analyzes everyday workplace messages to reveal **hidden execution risks** such as soft deadlines, unclear ownership, and decision deferral.
 
-Currently, two official plugins are available:
+The project is built using **Generative UI principles with Tambo**, where detected user intent dynamically determines which UI components are rendered — instead of relying on static screens or hardcoded UI flows.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🧠 Problem Statement
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A large portion of workplace inefficiency is not caused by lack of effort or skill, but by **unclear communication**.
 
-## Expanding the ESLint configuration
+Polite and well-intentioned messages often hide risks such as:
+- No clear ownership
+- Weak or soft deadlines
+- Deferred decisions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+These hidden signals frequently lead to delays, confusion, and follow-ups across teams.
+
+---
+
+## 💡 Solution
+
+Unsaid addresses this problem by analyzing messages **at the moment communication happens**.
+
+It:
+- Detects hidden communication risks
+- Explains why they matter
+- Suggests clearer alternatives
+
+Most importantly, the UI adapts dynamically based on the *meaning* of each message using **intent-driven Generative UI powered by Tambo**.
+
+---
+
+## ✨ Key Features
+
+- Large text input area for full message visibility  
+- Rule-based intent detection for explainable behavior  
+- Risk classification: **LOW / MEDIUM / HIGH**  
+- Clear explanations for detected risks  
+- Actionable suggestions to improve clarity  
+- **Intent-driven UI rendering using Tambo**
+
+---
+
+## 🧩 How Tambo Is Used (Core of the Project)
+
+Unsaid follows an **intent-first Generative UI architecture**:
+
+1. The user pastes a workplace message in natural language  
+2. The system detects **intent signals** such as:
+   - Soft deadlines  
+   - Missing ownership  
+   - Ambiguous responsibility  
+3. These detected intents are emitted as **intent events**
+4. **Tambo acts as the UI decision layer**, dynamically determining:
+   - Which analysis components to render  
+   - What risk indicators to show  
+   - Which suggestions appear  
+
+Instead of hardcoding UI flows, **Tambo enables the interface to adapt based on intent**, making the UI responsive to meaning rather than clicks.
+
+---
+
+## 🔄 Architecture Overview
+User Message
+↓
+Intent Detection (Rule-Based)
+↓
+Intent Events
+↓
+Tambo (UI Orchestration)
+↓
+Adaptive UI Components
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, JavaScript  
+- **Generative UI Framework:** Tambo  
+- **Styling:** CSS (minimal, clean UI)  
+- **Build Tool:** Vite  
+- **Deployment:** Vercel  

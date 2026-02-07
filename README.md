@@ -63,16 +63,20 @@ Instead of hardcoding UI flows, **Tambo enables the interface to adapt based on 
 ---
 
 ## 🔄 Architecture Overview
-User Input (Workplace Message)
-        ↓
-Intent Detection Layer (Rule-Based)
-        ↓
-Intent Events (soft_deadline, ownership_risk, etc.)
-        ↓
-Tambo (Generative UI Orchestration)
-        ↓
-Adaptive UI Components (Risk Cards, Suggestions, Severity)
+User Input:
+Users paste workplace messages in natural language through a large text input area.
 
+Intent Detection (Rule-Based):
+The system applies clear, rule-based patterns to identify hidden communication signals such as soft deadlines, missing ownership, and ambiguous responsibility.
+
+Intent Events:
+Detected signals are converted into explicit intent events, representing the underlying meaning of the message.
+
+Tambo — Generative UI Layer:
+Tambo receives intent events and dynamically determines which UI components to render, acting as the UI decision and orchestration layer.
+
+Adaptive UI Output:
+Risk indicators, explanations, and suggested improvements are rendered based on detected intent, allowing the interface to adapt dynamically for each message.
 
 ## 🛠️ Tech Stack
 

@@ -63,15 +63,16 @@ Instead of hardcoding UI flows, **Tambo enables the interface to adapt based on 
 ---
 
 ## 🔄 Architecture Overview
-User Message
-↓
-Intent Detection (Rule-Based)
-↓
-Intent Events
-↓
-Tambo (UI Orchestration)
-↓
-Adaptive UI Components
+User Input (Workplace Message)
+        ↓
+Intent Detection Layer (Rule-Based)
+        ↓
+Intent Events (soft_deadline, ownership_risk, etc.)
+        ↓
+Tambo (Generative UI Orchestration)
+        ↓
+Adaptive UI Components (Risk Cards, Suggestions, Severity)
+
 
 ## 🛠️ Tech Stack
 
